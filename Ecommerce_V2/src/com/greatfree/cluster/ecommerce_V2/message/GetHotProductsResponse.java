@@ -2,26 +2,26 @@ package com.greatfree.cluster.ecommerce_V2.message;
 
 import java.util.List;
 
-import com.greatfree.cluster.ecommerce_V2.data.product;
+import com.greatfree.cluster.ecommerce_V2.data.Product;
 
 import edu.greatfree.multicast.message.MulticastResponse;
 
 public class GetHotProductsResponse extends MulticastResponse{
 	
 	private static final long serialVersionUID = -963706149616712823L;
-	private List<product> products;
+	private List<Product> products;
 	
-	public GetHotProductsResponse(List<product> products, String collaboratorKey) {
+	public GetHotProductsResponse(List<Product> products, String collaboratorKey) {
 		super(AppID.GET_HOT_PRODUCTS_RESPONSE, collaboratorKey);
-		this.setProducts(products);
+		this.products = products;
 
 	}
 
-	public List<product> getProducts() {
+	public List<Product> getProducts() {
 		return products;
 	}
 
-	public void setProducts(List<product> products) {
+	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
 
