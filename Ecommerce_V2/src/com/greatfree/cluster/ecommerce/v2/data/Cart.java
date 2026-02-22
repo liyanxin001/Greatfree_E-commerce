@@ -1,4 +1,4 @@
-package com.greatfree.cluster.ecommerce_V2.data;
+package com.greatfree.cluster.ecommerce.v2.data;
 
 import java.io.Serializable;
 import java.util.HashMap;

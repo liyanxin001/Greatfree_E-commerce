@@ -1,4 +1,4 @@
-package com.greatfree.cluster.ecommerce_V2.message;
+package com.greatfree.cluster.ecommerce.v2.message;
 
 import edu.greatfree.cluster.message.ClusterRequest;
 
