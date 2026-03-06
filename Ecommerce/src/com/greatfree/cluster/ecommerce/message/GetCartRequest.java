@@ -1,7 +1,7 @@
 package com.greatfree.cluster.ecommerce.message;
 
 import edu.greatfree.cluster.message.ClusterRequest;
-import edu.greatfree.cluster.message.RequestType;
+
 
 public class GetCartRequest extends ClusterRequest {
 	
@@ -15,7 +15,7 @@ public class GetCartRequest extends ClusterRequest {
 	
 
 	public GetCartRequest(String userName) {
-		super(RequestType.UNICAST_REQUEST,AppID.GET_CART_REQUEST);
+		super(userName,AppID.GET_CART_REQUEST);
 		this.userName = userName;
 	}
 

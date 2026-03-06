@@ -6,13 +6,13 @@ import com.greatfree.cluster.ecommerce.v2.data.Product;
 
 import edu.greatfree.multicast.message.MulticastResponse;
 
-public class GetHotProductsResponse extends MulticastResponse{
+public class SearchForProductsResponse extends MulticastResponse{
 	
 	private static final long serialVersionUID = -963706149616712823L;
 	private List<Product> products;
 	
-	public GetHotProductsResponse(List<Product> products, String collaboratorKey) {
-		super(AppID.GET_HOT_PRODUCTS_RESPONSE, collaboratorKey);
+	public SearchForProductsResponse(List<Product> products, String collaboratorKey) {
+		super(AppID.SEARCH_FOR_PRODUCTS_RESPONSE, collaboratorKey);
 		this.products = products;
 
 	}
