@@ -10,12 +10,16 @@ public class AddToCartRequest extends IntercastRequest{
 
 	private String username;
 	private String storeName;
+	private String productName;
+	private int quantity;
 	
 
-	public AddToCartRequest(String username, String storeName) {
+	public AddToCartRequest(String username, String storeName, String productName, int quantity) {
 		super(username, storeName, AppID.ADD_TO_CART_REQUEST);
-		this.setUsername(username);
-		this.setStoreName(storeName);
+		this.username = username;
+		this.storeName = storeName;
+		this.setProductName(productName);
+		this.setQuantity(quantity);
 	}
 
 
@@ -36,6 +40,26 @@ public class AddToCartRequest extends IntercastRequest{
 
 	public void setStoreName(String storeName) {
 		this.storeName = storeName;
+	}
+
+
+	public String getProductName() {
+		return productName;
+	}
+
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 }

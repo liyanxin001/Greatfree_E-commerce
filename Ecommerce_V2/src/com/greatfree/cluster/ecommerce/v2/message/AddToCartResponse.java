@@ -1,25 +1,28 @@
 package com.greatfree.cluster.ecommerce.v2.message;
 
+import com.greatfree.cluster.ecommerce.v2.data.Product;
+
 import edu.greatfree.multicast.message.MulticastResponse;
 
 public class AddToCartResponse extends MulticastResponse{
 	
 	private static final long serialVersionUID = 6468081410236404230L;
-	private boolean isSucceeded;
+	private Product product;
 
-	public AddToCartResponse(boolean isSucceeded, String collaboratorKey) {
+	public AddToCartResponse(Product product, String collaboratorKey) {
 		super(AppID.ADD_TO_CART_RESPONSE, collaboratorKey);
-		this.setSucceeded(isSucceeded);
+		this.product = product;
 	}
 
-	public boolean isSucceeded() {
-		return isSucceeded;
+	public Product getProduct() {
+		return product;
 	}
 
-	public void setSucceeded(boolean isSucceeded) {
-		this.isSucceeded = isSucceeded;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
-	
+
+
 	
 
 }
